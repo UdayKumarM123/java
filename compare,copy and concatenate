@@ -1,0 +1,44 @@
+public class p4 {
+    public static Boolean Camparestring(String str1,String str2){
+        return str1.equals(str2);
+    }
+
+    public static String Copystring(String Original){
+        return new String(Original);
+    }
+
+    public static String Concatenate(String str1,String str2){
+        return str1+str2;
+    }
+    public static void main(String[] arg){
+
+        //compare
+        String str1="Hello";
+        String str2="hello";
+        System.out.println("string camparision:");
+        System.out.println("are eual?:" + Camparestring(str1,str2));
+
+        //concatenate
+        String p1="hello";
+        String p2="world";
+        String p3=Concatenate(p1,p2);
+        System.out.println("string concatenation:");
+        System.out.println(p3);
+
+        // copy
+        String a1="copy me";
+        String a2=Copystring(a1);
+        System.out.println("copying string:");
+        System.out.println(a1);
+        System.out.println(a2);
+    }
+}
+output:
+"C:\Program Files\Java\jdk-24\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.1.1\lib\idea_rt.jar=55060" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\RAVI KIRAN\IdeaProjects\LAB_prg\out\production\LAB_prg" p4
+string camparision:
+are eual?:false
+string concatenation:
+helloworld
+copying string:
+copy me
+copy me
