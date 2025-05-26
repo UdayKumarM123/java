@@ -1,0 +1,67 @@
+import java.util.Vector;
+
+class p8 {
+    String name;
+    double age;
+    String category;
+
+    public p8 (String name,double age,String category){
+        this.name=name;
+        this.age=age;
+        this.category=category;
+    }
+}
+class Onlineshopping {
+    private Vector<p8> inventory;
+
+    public Onlineshopping() {
+        inventory=new Vector<>();
+    }
+    public void addproduct(String name,double age,String category){
+        p8 p1=new p8(name, age, category);
+        inventory.add(p1);
+    }
+    public void removeproduct(String name){
+        for (int i=0; i<inventory.size(); i++){
+            if (inventory.get(i).name.equalsIgnoreCase(name)){
+                inventory.remove(i);
+                break;
+            }
+        }
+    }
+    public void displayinventory(){
+        System.out.print("inventory:");
+        for (p8 p1:inventory){
+            System.out.printf("name" + p1.name);
+        }
+    }
+    public static void main(String[] args) {
+        Onlineshopping man = new Onlineshopping();
+
+        man.addproduct("Laptop", 40000, "Electronics");
+        man.addproduct("T-shirt", 550, "Clothing");
+        man.addproduct("Book", 920, "Books");
+
+        man.displayinventory();
+
+        Remove a product
+        man.removeproduct("Book");
+
+        man.displayinventory();
+
+        man.removeproduct("Laptop");
+
+        Display updated inventory
+        man.displayinventory();
+    }
+}
+
+output:
+"C:\Program Files\Java\jdk-24\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.1.1\lib\idea_rt.jar=55151" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\RAVI KIRAN\IdeaProjects\LAB_prg\out\production\LAB_prg" Onlineshopping
+inventory:nameLaptopnameT-shirtnameBookinventory:nameLaptopnameT-shirtnameBook
+Process finished with exit code 0
+
+
+
+
+
