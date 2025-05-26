@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class p7 {
+    public static void main(String[] arg){
+        int MAX_NUM=5;
+        int[] scores=new int[MAX_NUM];
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the scores:");
+        for (int i=0; i<MAX_NUM; i++){
+            System.out.println("enter student score:"+ (i+1)+":");
+            scores[i]=sc.nextInt();
+
+        int sum=0;
+        int high_score=scores[0];
+        for (int scot:scores){
+            sum+=scot;
+            if(scot>high_score){
+                high_score =scot;
+            }
+        }
+            System.out.println("\nExam score statistics:");
+            System.out.println("Sum of all scores: " + sum);
+            System.out.println("Highest score attained: " + high_score);
+
+
+        }
+    }
+}
+output:
+"C:\Program Files\Java\jdk-24\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.1.1\lib\idea_rt.jar=55113" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\RAVI KIRAN\IdeaProjects\LAB_prg\out\production\LAB_prg" p7
+enter the scores:
+enter student score:1:
+23
+
+Exam score statistics:
+Sum of all scores: 23
+Highest score attained: 23
+enter student score:2:
+4
+
+Exam score statistics:
+Sum of all scores: 27
+Highest score attained: 23
+enter student score:3:
+67
+
+Exam score statistics:
+Sum of all scores: 94
+Highest score attained: 67
+enter student score:4:
+43
+
+Exam score statistics:
+Sum of all scores: 137
+Highest score attained: 67
+enter student score:5:
+76
+
+Exam score statistics:
+Sum of all scores: 213
+Highest score attained: 76
