@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class p1 {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("welcome to gym management:");
+        System.out.println("enter the name:");
+        String name=sc.nextLine();
+        System.out.println("enter the age:");
+        int age=sc.nextInt();
+        System.out.println("membership is active or not");
+        boolean isActive=sc.nextBoolean();
+        System.out.println("enter the duration:");
+        int duration=sc.nextInt();
+
+        System.out.println("membership fee is:");
+        double fee=duration*50.0;
+
+        System.out.println("name:"+ name);
+        System.out.println("age:"+ age);
+        System.out.println("membership Active:" + isActive);
+        System.out.println("duration is:" + duration);
+        System.out.println("membership fee is:" + fee);
+        sc.close();
+
+    }
+
+
+}
+output:
+"C:\Program Files\Java\jdk-24\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.1.1\lib\idea_rt.jar=54971" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\RAVI KIRAN\IdeaProjects\LAB_prg\out\production\LAB_prg" p1
+welcome to gym management:
+enter the name:
+uday
+enter the age:
+20
+membership is active or not
+true
+enter the duration:
+3
+membership fee is:
+name:uday
+age:20
+membership Active:true
+duration is:3
+membership fee is:150.0
