@@ -1,0 +1,92 @@
+interface Stack {
+    void push(int item);
+    int pop();
+}
+
+class FixedStack implements Stack {
+    private int[] stack;
+    private int top;
+
+    public FixedStack(int size) {
+        stack = new int[size];
+        top = -1;
+    }
+
+    public void push(int item) {
+        if (top == stack.length - 1) {
+            System.out.println("Fixed stack overflow");
+        } else {
+            stack[++top] = item;
+        }
+    }
+
+    public int pop() {
+        if (top < 0) {
+            System.out.println("Fixed stack underflow");
+            return -1;
+        } else {
+            return stack[top--];
+        }
+    }
+}
+
+class DynamicStack implements Stack {
+    private int[] stack;
+    private int top;
+
+    public DynamicStack(int size) {
+        stack = new int[size];
+        top = -1;
+    }
+
+    public void push(int item) {
+        if (top == stack.length - 1) {
+            int[] newStack = new int[stack.length * 2];
+            System.arraycopy(stack, 0, newStack, 0, stack.length);
+            stack = newStack;
+        }
+        stack[++top] = item;
+    }
+
+    public int pop() {
+        if (top < 0) {
+            System.out.println("Dynamic stack underflow");
+            return -1;
+        } else {
+            return stack[top--];
+        }
+    }
+}
+
+public class StackDemo {
+    public static void main(String[] args) {
+        Stack fixed = new FixedStack(3);
+        Stack dynamic = new DynamicStack(2);
+
+        fixed.push(10);
+        fixed.push(20);
+        fixed.push(30);
+        fixed.push(40);
+
+        dynamic.push(1);
+        dynamic.push(2);
+        dynamic.push(3);
+        dynamic.push(4);
+
+        System.out.println("Fixed stack pops:");
+        System.out.println(fixed.pop());
+        System.out.println(fixed.pop());
+
+        System.out.println("Dynamic stack pops:");
+        System.out.println(dynamic.pop());
+        System.out.println(dynamic.pop());
+    }
+}
+output:
+Fixed stack overflow
+Dynamic stack pops:
+4
+3
+Fixed stack pops:
+30
+20
