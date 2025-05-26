@@ -1,0 +1,39 @@
+public class p3 {
+    public static void main(String[] arg){
+        // boxing
+        Integer boxedInt=Integer.valueOf(10);
+        Double boxedDouble=Double.valueOf(20.3);
+        Float boxedFloat=Float.valueOf(3.14f);
+        Boolean boxedBoolean=Boolean.valueOf(true);
+        Character boxedChar=Character.valueOf('A');
+
+        //unboxing
+        int unboxedInt=boxedInt.intValue();
+        double unboxedDouble=boxedDouble.doubleValue();
+        float unboxedFloat=boxedFloat.floatValue();
+        boolean unboxedBoolean=boxedBoolean.booleanValue();
+        char unboxedChar=boxedChar.charValue();
+
+
+        System.out.println("boxedInt:" + boxedInt);
+        System.out.println("unboxedInt:" + unboxedInt);
+        System.out.println("boxedDouble:" + boxedDouble);
+        System.out.println("unboxedFloat:" + unboxedFloat);
+        System.out.println("boxedBoolean:" + boxedBoolean);
+        System.out.println("unboxedBoolean:" + unboxedBoolean);
+        System.out.println("boxedChar:" + boxedChar);
+        System.out.println("unboxedChar:" + unboxedChar);
+
+    }
+}
+output:
+"C:\Program Files\Java\jdk-24\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.1.1\lib\idea_rt.jar=55036" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\RAVI KIRAN\IdeaProjects\LAB_prg\out\production\LAB_prg" p3
+boxedInt:10
+unboxedInt:10
+boxedDouble:20.3
+unboxedFloat:3.14
+boxedBoolean:true
+unboxedBoolean:true
+boxedChar:A
+unboxedChar:A
+
