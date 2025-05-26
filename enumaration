@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class p6 {
+    public enum DayofWeek{
+        SUNDAY,
+        MONDAY,
+        TUESDAY,
+        WEDNESDAY,
+        THURSDAY,
+        FRIDAY,
+        SATURDAY;
+
+        public Boolean isworkday(){
+            return (this!=SATURDAY && this!=SUNDAY);
+    }
+    }
+    public static void main(String[] arg){
+        System.out.println("saturday working:" + DayofWeek.SATURDAY.isworkday());
+        System.out.println("monday working:" + DayofWeek.MONDAY.isworkday());
+
+    }
+}
+
+output:
+"C:\Program Files\Java\jdk-24\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.1.1\lib\idea_rt.jar=55084" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\RAVI KIRAN\IdeaProjects\LAB_prg\out\production\LAB_prg" p6
+saturday working:false
+monday working:true
