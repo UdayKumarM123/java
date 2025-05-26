@@ -1,0 +1,56 @@
+package apack;
+
+public class A {
+    int defaultvar=10;
+    protected int protectedvar=20;
+    private int privatevar=30;
+    public int publicvar=40;
+
+}
+package bpack;
+
+
+import apack.A;
+
+public class B extends A {
+    public void display() {
+        System.out.println("protected:" + protectedvar);
+        System.out.println("public:" + publicvar);
+
+    }
+}
+package cpack;
+
+import apack.A;
+
+public class C {
+    public void display(){
+        A a=new A();
+        System.out.println("public" + a.publicvar);
+    }
+}
+package dpack;
+
+import bpack.B;
+import cpack.C;
+
+public class protectedDemo {
+    public static void main(String[] arg){
+        B b=new B();
+        C c=new C();
+        System.out.println("From class B");
+        b.display();
+        System.out.println();
+        System.out.println("From class C");
+        c.display();
+
+    }
+}
+output:
+"C:\Program Files\Java\jdk-24\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.1.1\lib\idea_rt.jar=55182" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\RAVI KIRAN\IdeaProjects\lab10\out\production\lab10" dpack.protectedDemo
+From class B
+protected:20
+public:40
+
+From class C
+public40
